@@ -1,3 +1,40 @@
+
+def swap_elements_from_to(array, index, destination_index)
+  if index <= array.length-1 && destination_index <= array.length-1
+    array.sort do |aindex, destination_index|
+      index=1
+      destination_index=2
+      if array[index] > array[destination_index]
+        -1
+      elsif array[index] < array[destination_index]
+        -1
+      end
+    end
+  end
+end
+a=index
+b=destination_index
+
+
+
+
+def kesha_maker(array)
+  i=0
+  new_array=[ ]
+  while i<array.length
+    yield(array[i])
+    array[i][2]= "$"
+    new_array << yield(element[i])
+    i= i+1
+  end
+  new_array
+
+  array.each do |element|
+    element[2]= "$"
+  end
+end
+
+
 # Collections Practice
 
 ## Objectives
